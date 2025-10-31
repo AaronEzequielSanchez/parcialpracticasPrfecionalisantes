@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RutaCero Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <img src="logo.png" alt="RutaCero Games Logo" class="logo">
+    <nav id="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="menu-btn" id="menu-btn">
+      ☰
+    </div>
+  </header>
+
+  <section id="inicio" class="hero fade-up">
+    <h1>Bienvenido a <span>RutaCero Games</span></h1>
+    <p>Desarrollamos experiencias únicas para jugadores independientes.</p>
+    <button onclick="scrollToSection('proyectos')">Ver Proyectos</button>
+  </section>
+
+  <section id="proyectos" class="projects fade-up">
+    <h2>Proyectos Destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Proyecto 1</h3>
+        <p>Próximamente...</p>
+      </div>
+      <div class="card">
+        <h3>Proyecto 2</h3>
+        <p>En desarrollo...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about fade-up">
+    <h2>Sobre RutaCero</h2>
+    <p>Somos un estudio indie enfocado en crear videojuegos con alma, explorando nuevas ideas y estilos visuales. Este es solo el comienzo de nuestra ruta.</p>
+  </section>
+
+  <section id="contacto" class="contact fade-up">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 RutaCero Games. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
