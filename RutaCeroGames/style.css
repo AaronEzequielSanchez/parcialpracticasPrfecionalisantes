@@ -1,0 +1,197 @@
+/* ===========================
+   Estilos base del sitio
+   =========================== */
+:root {
+    --color-fondo: #0f0f0f;
+    --color-texto: #e6e6e6;
+    --color-principal: #d67c27; /* naranja terroso del logo */
+    --color-secundario: #1a1a1a;
+    --transicion: 0.3s ease;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+}
+
+/* ===========================
+   Header y Navegación
+   =========================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(15, 15, 15, 0.95);
+    border-bottom: 2px solid var(--color-principal);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--color-principal);
+}
+
+/* Menú hamburguesa para móviles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-texto);
+    transition: var(--transicion);
+}
+
+/* ===========================
+   Sección principal (Hero)
+   =========================== */
+main {
+    padding-top: 120px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #141414, #0f0f0f);
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #ccc;
+}
+
+.btn {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicion);
+}
+
+.btn:hover {
+    background-color: #ff9733;
+}
+
+/* ===========================
+   Sección de introducción
+   =========================== */
+.intro {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.intro h3 {
+    color: var(--color-principal);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-top: 2px solid var(--color-principal);
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Animaciones y efectos visuales
+   =========================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-secundario);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        border-left: 2px solid var(--color-principal);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
