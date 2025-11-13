@@ -1,0 +1,479 @@
+/* ===========================
+   Estilos base del sitio
+   =========================== */
+:root {
+    --color-fondo: #0f0f0f;
+    --color-texto: #e6e6e6;
+    --color-principal: #d67c27; /* naranja terroso del logo */
+    --color-secundario: #1a1a1a;
+    --transicion: 0.3s ease;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+}
+
+/* ===========================
+   Header y Navegación
+   =========================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(15, 15, 15, 0.95);
+    border-bottom: 2px solid var(--color-principal);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--color-principal);
+}
+
+/* Menú hamburguesa para móviles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-texto);
+    transition: var(--transicion);
+}
+
+/* ===========================
+   Sección principal (Hero)
+   =========================== */
+main {
+    padding-top: 120px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #141414, #0f0f0f);
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #ccc;
+}
+
+.btn {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicion);
+}
+
+.btn:hover {
+    background-color: #ff9733;
+}
+
+/* ===========================
+   Sección de introducción
+   =========================== */
+.intro {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.intro h3 {
+    color: var(--color-principal);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-top: 2px solid var(--color-principal);
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Animaciones y efectos visuales
+   =========================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-secundario);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        border-left: 2px solid var(--color-principal);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+/* ============================================
+   RutaCero Games - Estilo Base
+   ============================================ */
+
+/* --- Variables globales --- */
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #f0f0f0;
+  --accent-color: #ffa34d;
+  --secondary-color: #1a1a1a;
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* --- Contenedor --- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Encabezado --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(15, 15, 15, 0.95);
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--text-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--accent-color);
+}
+
+/* --- Botón menú móvil --- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* --- Hero Sections --- */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #0d0d0d 0%, #111 100%);
+  color: var(--text-color);
+  padding-top: 4rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+/* --- Galería de Juegos --- */
+.games-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.game-card {
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(255, 163, 77, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(255, 163, 77, 0.2);
+}
+
+.game-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+
+.game-card p {
+  margin: 0 1rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* --- Página Nosotros --- */
+.about-content {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.about-content p {
+  margin: 1.5rem auto;
+  max-width: 700px;
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* --- Formulario de Contacto --- */
+.contact-form-section {
+  padding: 4rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 163, 77, 0.1);
+}
+
+form label {
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  background-color: #111;
+  color: var(--text-color);
+  border: 1px solid #333;
+  padding: 0.8rem;
+  border-radius: 6px;
+  resize: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(255, 163, 77, 0.3);
+}
+
+form button {
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  padding: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ffb36b;
+}
+
+#form-status {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  background-color: #0a0a0a;
+  color: #aaa;
+}
+
+/* --- Animaciones --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(20, 20, 20, 0.98);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .games-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
